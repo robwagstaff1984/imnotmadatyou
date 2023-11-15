@@ -19,8 +19,4 @@ class UserViewModel: ObservableObject {
             self?.users = usersData
         }
     }
-    
-    func createInitialUsers() {
-        dataRepo.createInitialUserData()
-    }
 }

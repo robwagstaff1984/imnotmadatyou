@@ -37,22 +37,4 @@ class DataRepository {
             print(error.localizedDescription)
         }
     }
-    
-    func createInitialUserData() {
-           // Set up initial user data
-           let usersData: [String: Any] = [
-               "UID_Steph": ["username": "Steph", "isAdmin": true],
-               "moWmXy82nYgkEfidEWUzwLUfpgN2":  ["username": "moWmXy82nYgkEfidEWUzwLUfpgN2", "isAdmin": true],
-               "UID_Rob": ["username": "Rob", "isAdmin": false, "lastTimeNotMad": "initialTimestamp", "totalTimesNotMad": 0],
-               // Add more users as needed
-           ]
-
-           ref.child("users").setValue(usersData) { error, _ in
-               if let error = error {
-                   print("Error setting initial user data: \(error.localizedDescription)")
-               } else {
-                   print("Initial user data set successfully.")
-               }
-           }
-       }
 }

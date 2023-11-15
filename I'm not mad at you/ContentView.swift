@@ -6,10 +6,6 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            // Your view code here
-            Button("Create Inital Users") {
-                viewModel.createInitialUsers()
-            }
             Button("Load Users") {
                 viewModel.loadUsers()
             }
