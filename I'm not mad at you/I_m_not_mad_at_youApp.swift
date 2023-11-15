@@ -1,14 +1,10 @@
-//
-//  I_m_not_mad_at_youApp.swift
-//  I'm not mad at you
-//
-//  Created by Rob on 13/11/2023.
-//
-
 import SwiftUI
+import FirebaseCore
 
 @main
 struct I_m_not_mad_at_youApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
