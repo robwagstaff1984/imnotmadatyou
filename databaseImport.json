@@ -1,0 +1,24 @@
+{
+    "users": {
+        "UID_Steph": {
+            "username": "Steph",
+            "isAdmin": true
+        },
+        "moWmXy82nYgkEfidEWUzwLUfpgN2": {
+            "username": "Steph",
+            "isAdmin": true
+        },
+        "UID_Rob": {
+            "username": "Rob",
+            "isAdmin": false,
+            "lastTimeNotMad": "initialTimestamp",
+            "totalTimesNotMad": 0
+        },
+        "UID_Adam": {
+            "username": "Adam",
+            "isAdmin": false,
+            "lastTimeNotMad": "initialTimestamp",
+            "totalTimesNotMad": 0
+        }
+    }
+}
