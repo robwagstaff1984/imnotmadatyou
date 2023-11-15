@@ -38,6 +38,8 @@
 		D4BF947E2B04AB71005E79BF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D4BF947D2B04AB71005E79BF /* FirebaseStorage */; };
 		D4BF94802B04AB71005E79BF /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D4BF947F2B04AB71005E79BF /* FirebaseStorageCombine-Community */; };
 		D4BF94822B04AF37005E79BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF94812B04AF37005E79BF /* AppDelegate.swift */; };
+		D4BF94842B04BFC6005E79BF /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF94832B04BFC6005E79BF /* DataRepository.swift */; };
+		D4BF94862B04BFE1005E79BF /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF94852B04BFE1005E79BF /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		D4361AC82B01F16300C436D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D4BF94152B04A72D005E79BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D4BF94812B04AF37005E79BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4BF94832B04BFC6005E79BF /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
+		D4BF94852B04BFE1005E79BF /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				D4BF94152B04A72D005E79BF /* GoogleService-Info.plist */,
 				D4361AC62B01F16300C436D7 /* I_m_not_mad_at_you.entitlements */,
 				D4361AC72B01F16300C436D7 /* Preview Content */,
+				D4BF94832B04BFC6005E79BF /* DataRepository.swift */,
+				D4BF94852B04BFE1005E79BF /* UserViewModel.swift */,
 			);
 			path = "I'm not mad at you";
 			sourceTree = "<group>";
@@ -227,7 +233,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4BF94822B04AF37005E79BF /* AppDelegate.swift in Sources */,
+				D4BF94842B04BFC6005E79BF /* DataRepository.swift in Sources */,
 				D4361AC32B01F16200C436D7 /* ContentView.swift in Sources */,
+				D4BF94862B04BFE1005E79BF /* UserViewModel.swift in Sources */,
 				D4361AC12B01F16200C436D7 /* I_m_not_mad_at_youApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

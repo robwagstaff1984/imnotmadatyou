@@ -1,17 +1,19 @@
+// ContentView.swift
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = UserViewModel()
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            // Your view code here
+            Button("Load Users") {
+                viewModel.loadUsers()
+            }
+            List(viewModel.users?.keys.sorted() ?? [], id: \.self) { key in
+                Text(key)
+                // Display user data here
+            }
         }
-        .padding()
     }
-}
-
-#Preview {
-    ContentView()
 }
