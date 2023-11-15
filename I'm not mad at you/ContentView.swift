@@ -13,6 +13,7 @@ struct ContentView: View {
                 Text(key)
                 // Display user data here
             }
+            // Display user's displayName and profileText here.
         }
     }
 }
