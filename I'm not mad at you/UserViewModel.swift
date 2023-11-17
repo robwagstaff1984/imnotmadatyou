@@ -19,35 +19,20 @@ class UserViewModel: ObservableObject {
         Auth.auth().signIn(withEmail: email, password: password, completion: completion)
     }
     
-    // Function to present the FirebaseUI Auth ViewController
-    func presentFirebaseAuthUI() {
-        // Get the default Auth UI object
-        let authUI = FUIAuth.defaultAuthUI()
-        guard let authViewController = authUI?.authViewController() else { return }
-
-        // Set the delegate to handle responses
-        authUI?.delegate = firebaseAuthDelegate  // Assuming you have a firebaseAuthDelegate
-
-        // Configure the Auth UI for email/password authentication
-        let emailAuthProvider = FUIEmailAuth()
-        authUI?.providers = [emailAuthProvider]
-
-        // Present the Auth view controller
-        UIApplication.shared.windows.first?.rootViewController?.present(authViewController, animated: true, completion: nil)
-    }
-    
-    func signInWithGoogle(completion: @escaping (AuthDataResult?, Error?) -> Void) {
-        let authUI = FUIAuth.defaultAuthUI()
-        guard let authViewController = authUI?.authViewController() else { return }
-
-        UIApplication.shared.windows.first?.rootViewController?.present(authViewController, animated: true, completion: nil)
-
-        authUI?.delegate = firebaseAuthDelegate // Use firebaseAuthDelegate here
-    }
-    
-    // Register a new user with email and password
-    func registerWithEmail(email: String, password: String, completion: @escaping (AuthDataResult?, Error?) -> Void) {
-        Auth.auth().createUser(withEmail: email, password: password, completion: completion)
+    func presentFirebaseAuth() {
+        guard let authUI = FUIAuth.defaultAuthUI() else { return }
+        authUI.delegate = firebaseAuthDelegate
+        
+        let providers: [FUIAuthProvider] = [
+            FUIGoogleAuth(authUI: authUI),
+            FUIEmailAuth()
+        ]
+        authUI.providers = providers
+        
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootViewController = windowScene.windows.first?.rootViewController {
+            rootViewController.present(authUI.authViewController(), animated: true)
+        }
     }
     
     func addUser(userId: String, isAdmin: Bool, lastTimeNotMad: String, totalTimesNotMad: Int) {

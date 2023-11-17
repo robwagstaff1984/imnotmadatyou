@@ -12,21 +12,10 @@ struct LandingPage: View {
             Image("YourAppLogo") // Replace with your app's logo
 
 
-            Button("Sign in with Email") {
-                // Trigger email/password sign-in flow
-                viewModel.presentFirebaseAuthUI()
+            Button("Sign up") {
+                viewModel.presentFirebaseAuth()
             }
             .buttonStyle(.bordered)
-
-            Button("Sign in with Google") {
-                // Trigger Google Sign-In flow
-                viewModel.signInWithGoogle(completion: { authDataResult, error in
-                    
-                })
-            }
-            .buttonStyle(.bordered)
-
-            // Add more sign-in buttons as needed (e.g., Facebook)
 
             Spacer()
         }
